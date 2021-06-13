@@ -1,5 +1,5 @@
 # Weather App
-A application which fetch current weather of the city. Its created using #ReactJs as frontend library and NodeJs/Express as backend.
+An application that fetches the current weather of the city. It's created using #ReactJs as frontend library and NodeJs/Express as backend.
 
 # Pre-Requisite
 1. Node > 12.16.1 [Download Node | https://nodejs.org/en/]
