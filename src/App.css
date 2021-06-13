@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body {
+    font: 16px Arial;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.header {
+    height: 30px;
+    background-color: brown;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+    padding: 5px 0px;
+    text-align: center;
 }
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  input[type=text] {
+    background-color: #fff;
+    width: 100%;
+  }
+
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  input[type=submit]:disabled {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .autocomplete-items {
+    position: absolute;
+    max-height: 300px;
+    overflow: scroll;
+    border: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transition: all 2s;
+  }
+
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+
+  .autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+  .loader {
+    position: absolute;
+    z-index: 999;
+    right: 10px;
+    top: 10px;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #3498db;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    margin: 5px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .card .container {
+    padding: 2px 16px;
+  }
+
+  .weather-container {
+      display: flex;
+      justify-content: center;
+  }
+
+  .weather-container .loader {
+    position: static;
+    width: 50px;
+    height: 50px;
+  }
+
+  .small-info {
+    font-size: 12px;
+    color: #ccc
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .autocomplete {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .weather-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }

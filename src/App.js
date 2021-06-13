@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
+
+import Location from './Location';
+//container
+import React, { useEffect, useState } from 'react';
+import Weather from './Weather';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [location, setLocation] = useState('')
+
+    return <React.Fragment>
+            <div className="header">
+                <span>Weather React/NodeJs Application</span>
+            </div>
+            <div className="container" >
+                <Location submitLocation={(location) => setLocation(location)}/>
+                <hr></hr>
+                <Weather location={location} />
+            </div>
+        </React.Fragment>
 }
 
 export default App;
