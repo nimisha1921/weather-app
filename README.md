@@ -1,6 +1,9 @@
 # Weather App
 An application that fetches the current weather of the city. It's created using #ReactJs as frontend library and NodeJs/Express as backend.
 
+# Preview
+![Demo](https://github.com/nimisha1921/weather-app/blob/main/public/CPT2106131652-1000x600%20(1).gif)
+
 # Pre-Requisite
 1. Node > 12.16.1 [Download Node | https://nodejs.org/en/]
 # How to run
